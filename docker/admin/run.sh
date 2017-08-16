@@ -1,0 +1,1 @@
+docker run -p 8080:8080 --name admin -v /etc/group:/etc/group:ro -v /etc/passwd:/etc/passwd:ro -v `pwd`/../admin:/usr/src/app:rw -u $( id -u $USER ):$( id -g $USER )  --net=mynet -e ENV=dev -e PORT=8080 -d admin

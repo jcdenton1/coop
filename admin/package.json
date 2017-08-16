@@ -1,0 +1,40 @@
+{
+  "name": "Dockerized-NodeJS-MongoDB-React-Sample-App",
+  "main": "server.js",
+  "version": "0.0.1",
+  "description": "Sample dockerized NodeJS, MongoDB, React app",
+  "scripts": {
+    "start": "npm run build:dev && node server.js",
+    "build": "webpack && cp public/index.html publicdist/index.html && cp -r public/css publicdist && cp -r public/libs publicdist",
+    "build:dev": "NODE_ENV=dev npm run build",
+    "build:prod": "NODE_ENV=prod -p npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "latest",
+    "colors": "^1.1.2",
+    "express": "latest",
+    "fixed-data-table-2": "^0.8.0",
+    "lodash": "latest",
+    "method-override": "latest",
+    "mongoose": "latest",
+    "morgan": "^1.8.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^3.3.0"
+  }
+}
